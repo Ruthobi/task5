@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <h2 style="text-align: center; color: black;">Signup Form</h2>
+    <form #login="ngForm" (ngSubmit)="Submit(login)">
+        <div class="form-group">
+          <label for="firstname" id="list2">Firstname</label>
+          <input #name="ngModel" required type="name" class="form-control" id="list" name="firstname" placeholder="Enter firstname" ngModel>
+       <span *ngIf="name.invalid && name.touched" class="alert">firstname is required</span>
+        </div>
+        <div class="form-group">
+            <label for="middlename" id="list2">Middlename</label>
+            <input #name="ngModel" required type="name" class="form-control" id="list" name="middlename" placeholder="Enter middlename" ngModel>
+         <span *ngIf="name.invalid && name.touched" class="alert">middlename is required</span>
+        </div>
+          <div class="form-group">
+            <label for="lastname" id="list2">Lastname</label>
+            <input #name="ngModel" required type="name" class="form-control" id="list" name="lastname" placeholder="Enter lastname" ngModel>
+          <span *ngIf="name.invalid && name.touched" class="alert">lastname is required</span>
+        </div>
+          <div class="form-group">
+            <label for="phone no" id="list2">Phone no</label>
+            <input #phone="ngModel" minlength="11" required type="phone" class="form-control" id="list" name="phone" placeholder="Enter phone no" ngModel>
+          <span *ngIf="phone.invalid && phone.touched" class="alert">phone no is invalid</span>
+        </div>
+          <div class="form-group">
+            <label for="email" id="list2">Email</label>
+            <input #email="ngModel" required type="email" class="form-control" id="list" name="email" placeholder="Enter email" ngModel>
+         <span *ngIf="email.invalid && email.touched" class="alert">email is required</span>
+        </div>
+        <div class="form-group">
+          <label for="password" id="list2">Password</label>
+          <input #password="ngModel" minlength="3" required type="password" class="form-control" id="list" name="password" placeholder="Password" ngModel>
+        <span *ngIf="password.invalid && password.touched" class="alert">password is invalid</span>
+        </div>
+        <div class="form-group">
+            <label for="password" id="list2">Confirm Password</label>
+            <input #password="ngModel" minlength="3" required type="password" class="form-control" id="list" name="password" placeholder="confirm Password" ngModel>
+         <span *ngIf="password.invalid && password.touched" class="alert">confirm password</span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="list2" ngModel>
+          <label class="form-check-label" for="exampleCheck1">Terms checkbox</label>
+        </div>
+        <button [disabled]="login.invalid" style="margin-left: 10rem;" type="login" class="btn btn-danger">Login</button>
+      </form>
+    </div>
+    

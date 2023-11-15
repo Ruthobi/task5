@@ -1,0 +1,17 @@
+.container-fluid{
+    background-color: cadetblue;
+    height: 500px;
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#list{
+    font-size: 10px;
+    
+}
+#list2{
+    color: black;
+}
+.alert{
+    color: red;
+}
